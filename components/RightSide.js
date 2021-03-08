@@ -1,5 +1,38 @@
 
 
+export const getData = ()=>{
+    
+    const apiUrl = 'http://localhost:3000/data_tamu'
+    const options = {
+        method : "GET",
+        mode : 'cors',
+        headers : {
+            "Content-Type" : "application/json",
+            Accept : "application/json"
+        }
+    }
+
+    fetch(apiUrl , options)
+    .then(res => res.json())
+    .then((data) => {
+        data.map((e)=>{
+            let tb = document.getElementById('table_body')
+            tb.innerHTML += `
+                <tr>
+                    <td>${e.id}</td>
+                    <td>${e.nama_lengkap}</td>
+                    <td>${e.alamat}</td>
+                    <td>${e.telp}</td>
+                </tr>
+            `
+        })
+    })
+    .catch(err => console.log(err))
+}
+
+
+
+
 const RightSide = ()=>{
 
     return `
@@ -17,30 +50,16 @@ const RightSide = ()=>{
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>fadliselaz</td>
-                    <td>depok</td>
-                    <td>081213655573</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>evalia rompas</td>
-                    <td>depok</td>
-                    <td>089612314232</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>bunga selva</td>
-                    <td>depok</td>
-                    <td>08124234234</td>
-                </tr>
+            <tbody id="table_body">
+                
+              
             </tbody>
 
         </table>
     </div>
     `
 }
+
+getData()
 
 export default RightSide

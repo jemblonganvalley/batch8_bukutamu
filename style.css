@@ -44,6 +44,9 @@ a{
     /* border: .5px solid red; */
     background-color: whitesmoke;
     box-shadow: 4px 2px 8px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .ls_text{
@@ -94,9 +97,11 @@ a{
 .right_side{
     min-width: 70%;
     width: auto;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     overflow-y: scroll;
     padding: 40px;
+    margin-left: 30%;
 }
 
 .rs_table{

@@ -1,0 +1,13 @@
+###
+GET http://localhost:3000/data_tamu
+Content-Type: application/json
+
+###
+POST http://localhost:3000/data_tamu
+Content-Type: application/json
+
+{
+    "nama_lengkap" : "mantanmu",
+    "alamat" : "hatimu",
+    "telp" : "08121212121212"
+}
