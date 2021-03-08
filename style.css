@@ -1,0 +1,122 @@
+/* CSS RESETER */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poiret+One&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: 'Poiret One', cursive;
+}
+
+p{
+    line-height: 2;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.app{
+    display: flex;
+}
+
+.left_side{
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: .5px solid red; */
+    background-color: whitesmoke;
+    box-shadow: 4px 2px 8px rgba(0,0,0,0.2);
+}
+
+.ls_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ls_text h3{
+    padding: 0;
+    margin: 0;
+    font-size: 2.8rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.left_side form{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left_side form label{
+    text-transform: uppercase;
+}
+
+.left_side form input{
+    height: 35px;
+    border: .2px dotted gray;
+    outline: none;
+    padding: 0 10px;
+    font-family: inherit;
+}
+
+.left_side form button{
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.right_side{
+    min-width: 70%;
+    width: auto;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 40px;
+}
+
+.rs_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rs_table thead tr th{
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.rs_table tbody tr td{
+    height: 35px;
+    text-align: center;
+    border-bottom: .2px solid gray;
+    text-transform: capitalize;
+}
